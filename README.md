@@ -20,9 +20,9 @@
 
 2\. CRUD operations based on privileges.
 
-2\. Search/Pagination
+2\. Search/Pagination, eg. /users/table, /users/table?page=1&limit=2
 
-3\. Image gallery
+3\. Image gallery(uploading and deleting , specefic to a user)
 
 4\. Authentication(session based) and Authorization(role based)
 
