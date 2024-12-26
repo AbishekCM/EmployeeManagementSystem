@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Image Uploading and viewing:</h1>
+
+  <form action="/images" method="POST" enctype="multipart/form-data">
+
+
+    <label for="file">Upload any file:</label>
+    <input type="file" name="file" id="file" required />
+    <br><br>
+
+    <button type="submit">Upload</button>
+  </form>
+  <% for(image of images) { %>
+
+    <img src="<%= image.url %>" alt="" style="height: 300px;width: 300px;">
+    <a href="/images/delete/<%= image._id %>">Delete</a>
+
+    <% } %>
+
+</body>
+
+</html>

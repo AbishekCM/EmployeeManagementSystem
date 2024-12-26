@@ -1,0 +1,74 @@
+<h1>Edit the Employee Information</h1>
+<form action="/users/<%=user._id%>" method="POST" enctype="multipart/form-data">
+
+
+
+  <% if (sessionUser==='admin' ) { %>
+    <label for="name">Name:<%= user.name %></label>
+    <br><br>
+
+    <label for="age">Age:<%= user.age %></label>
+
+    <br><br>
+    <label for="email">Email:<%= user.email %></label>
+
+    <br><br>
+    <label for="role">Role:</label>
+    
+
+    <select id="role" name="role" size="2">
+      <% if (user.role==='admin') { %>
+        <option value="Admin" selected>Admin</option>
+        <option value="User" >User</option>
+       
+      <% }else{ %>
+
+
+        <option value="admin">Admin</option>
+        <option value="user" selected>User</option>
+
+      <% } %>
+      
+       
+
+      
+      
+      
+  </select>
+
+    <br><br>
+
+    <% }else{ %>
+
+
+      <label for="name">Name:</label>
+      <input type="name" id="name" name="name" value="<%= user.name %>" required>
+      <br><br>
+
+      <label for="age">Age:</label>
+      <input type="age" id="age" name="age" value="<%= user.age %>" required>
+
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" value="<%= user.email %>" required>
+      <br><br>
+
+      <img src="/images/<%= user.image %>" alt="" style="width: 300px; height: auto;">
+
+      <br><br>
+
+      <label for="file">Upload any file:</label>
+      <input type="file" name="file" id="file" />
+
+      <br><br>
+      <label for="role">Role:<%= user.role %></label>
+      <br>
+
+
+      <% } %>
+
+        <br>
+
+
+        <button type="submit">Update</button>
+</form>
