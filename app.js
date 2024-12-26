@@ -36,7 +36,7 @@ app.use(
       mongoUrl: process.env.MONGO_URI_Cluster,
       ttl: 14 * 24 * 60 * 60, // Session expiration in seconds (14 days)
     }),
-    cookie: { secure: true, maxAge: 6000000 },
+    //cookie: { secure: true, maxAge: 6000000 },
   })
 );
 //Routes:
