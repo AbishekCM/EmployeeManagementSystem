@@ -30,7 +30,7 @@
 
 **Technologies/tools used:**
 
-Ejs, Node js, MongoDB cluster, MVC architecture, Cloudinary.......
+Ejs, Node js(with Express), MongoDB cluster, MVC architecture, Cloudinary.......
 
   
 
